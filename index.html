@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Funnel Designer & GHL System Builder." />
+    <meta name="author" content="James" />
+    <meta name="robots" content="index, follow" />
+    <title>Just Dev by James | Funnel Designer & GHL System Builder </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <meta name="theme-color" content="#0B7DDA" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- NAV -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Just Dev by JD - Home">
+                <img src="Just Dev Nav Logo.png" alt="Just Dev by JD" class="logo-img" width="60" height="60"
+                    onerror="this.style.display='none'" />
+                <span class="logo-text">Just Dev <span class="accent">by JD</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#portfolio" class="nav-link" data-section="portfolio">Projects</a></li>
+                <li><a href="#process" class="nav-link" data-section="process">Process</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-section" aria-label="Hero">
+        <div class="hero-grid-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                ⚡ Funnel Designer &amp; GHL System Builder
+            </div>
+            <h1 class="hero-title">Your Business Doesn’t Need More <span class="gradient-text">Traffic.</span><br>
+                It Needs a <span class="gradient-text">System.</span>
+            </h1>
+            <p class="hero-subtitle">Just Dev by JD helps businesses fix inconsistent leads, low conversions, missed
+                follow-ups, wasted marketing spend, and unclear customer journeys—so you can turn more visitors into
+                paying
+                clients.</p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-primary">
+                    <span class="btn-pulse" aria-hidden="true"></span>
+                    Book a 30-minute Strategy Call
+                </a>
+                <a href="#portfolio" class="btn btn-ghost">View My Works</a>
+            </div>
+            <div class="hero-stats" aria-label="Key statistics">
+                <div class="stat-item">
+                    <div class="stat-number-row"><span class="stat-number" data-count="5">0</span><span
+                            class="stat-plus">+</span>
+                    </div>
+                    <span class="stat-label">Funnels Built</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <div class="stat-number-row"><span class="stat-number" data-count="3">0</span><span
+                            class="stat-plus">x</span>
+                    </div>
+                    <span class="stat-label">Avg Lead Increase</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <div class="stat-number-row"><span class="stat-number" data-count="98">0</span><span
+                            class="stat-plus">%</span></div>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section section" aria-label="About James">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// THE FOUNDER</span>
+                <h2 class="section-title">The Funnel Architect <span class="gradient-text">Behind Your Growth</span>
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrap fade-in-left">
+                    <div class="about-frame">
+                        <div class="frame-corner tl" aria-hidden="true"></div>
+                        <div class="frame-corner tr" aria-hidden="true"></div>
+                        <div class="frame-corner bl" aria-hidden="true"></div>
+                        <div class="frame-corner br" aria-hidden="true"></div>
+                        <img src="About Me Picture.png" alt="James — Funnel Designer & GHL System Builder"
+                            class="about-photo" width="380" height="460" loading="lazy" />
+                    </div>
+                    <div class="about-floating-card" aria-hidden="true">
+                        <span class="floating-icon">🎯</span>
+                        <div>
+                            <strong>James Denzel Jimeno</strong>
+                            <p>GoHighLevel Funnel/Website Builder and Automation Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content fade-in-right">
+                    <p class="about-lead">Hi, I'm James Denzek Jimeno, a founder of Just Dev by JD (from the name
+                        itself).
+                        <br> I'm a Funnel Designer and GHL System Builder.
+                    </p>
+                    <div class="about-tagline">"Dream big, aim for the sky, make it happen"</div>
+                    <p class="about-text">I work with coaches, business owners, and service providers who are already
+                        generating
+                        leads—but struggling to turn them into consistent revenue because of broken systems behind the
+                        scenes.<br>
+                        <br>
+                        Most of the time, the problem isn’t traffic. It’s what happens after the lead comes in: messy
+                        CRMs, missed
+                        follow-ups, scattered tools, and no clear process to move people from inquiry to client.
+                        <br><br>
+                        That’s where I come in.<br><br>
+                        Just Dev by JD is not about selling “funnels” or quick fixes. It’s about building the system
+                        your business
+                        actually runs on—the infrastructure that keeps leads organized, conversations moving, and sales
+                        consistent
+                        without relying on manual effort or guesswork.
+                        <br><br>
+                        Instead of offering a one-size-fits-all package, we look at how your current setup is working
+                        first. We
+                        identify the gaps, bottlenecks, and missed opportunities in your sales process, then recommend
+                        the right
+                        system based on what your business actually needs to grow.
+                    </p>
+                    <p class="about-text">My approach is simple: understand your business, design with purpose, automate
+                        with
+                        precision — and deliver results you can measure in revenue.
+                    <p>
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28"
+                                    height="28">
+                                    <path d="M4 7h24l-9 10v8l-6-3v-5L4 7z" stroke="#0B7DDA" stroke-width="2"
+                                        stroke-linejoin="round" fill="none" />
+                                </svg>
+                            </div>
+                            <h4>Funnel Design</h4>
+                            <p>Built to convert at every stage of the buyer journey.</p>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28"
+                                    height="28">
+                                    <circle cx="16" cy="16" r="4" stroke="#0B7DDA" stroke-width="2" />
+                                    <path
+                                        d="M16 3v3M16 26v3M3 16h3M26 16h3M6.34 6.34l2.12 2.12M23.54 23.54l2.12 2.12M6.34 25.66l2.12-2.12M23.54 8.46l2.12-2.12"
+                                        stroke="#0B7DDA" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h4>Automation</h4>
+                            <p>Set it up once. Let the system work 24/7 for you.</p>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28"
+                                    height="28">
+                                    <polyline points="4,24 12,14 18,18 28,8" stroke="#0B7DDA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="22,8 28,8 28,14" stroke="#0B7DDA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h4>Lead Growth</h4>
+                            <p>More qualified leads. More closed deals. More revenue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section section" aria-label="Services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// SERVICES</span>
+                <h2 class="section-title">What I <span class="gradient-text">Deliver</span></h2>
+                <p class="section-subtitle">Seven game-changing services to stop manual work, speed up replies, and turn
+                    your
+                    CRM into real revenue.</p>
+            </div>
+            <div class="services-masonry">
+                <div class="service-card featured" data-aos="fade-up" style="--delay:0ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-badge">⭐ Done For You</div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="10" width="48" height="14" rx="4" stroke="currentColor" stroke-width="2.5" />
+                            <rect x="8" y="28" width="48" height="14" rx="4" stroke="currentColor" stroke-width="2.5" />
+                            <circle cx="52" cy="17" r="3" fill="currentColor" />
+                            <circle cx="52" cy="35" r="3" fill="currentColor" />
+                            <path d="M32 48v8M24 56h16" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Set Up Your System (Done For You)</h3>
+                    <p>Start strong with a CRM that actually works. We set up your entire GoHighLevel account—contacts,
+                        tags,
+                        calendars, email, phone, and more—so you're ready to go from day one.</p>
+                    <span class="service-highlight">✓ Done in 14 days</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" style="--delay:80ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M36 8L16 36h20l-8 20L52 28H32z" stroke="currentColor" stroke-width="2.5"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Never Miss a Lead Again</h3>
+                    <p>Respond to every lead in seconds—even while you sleep. We build smart automations that instantly
+                        reply when
+                        someone messages, calls, or fills out a form.</p>
+                    <span class="service-highlight">⚡ Replies in under 60 seconds</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" style="--delay:160ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="10" width="14" height="44" rx="3" stroke="currentColor" stroke-width="2.5" />
+                            <rect x="25" y="10" width="14" height="30" rx="3" stroke="currentColor"
+                                stroke-width="2.5" />
+                            <rect x="44" y="10" width="14" height="20" rx="3" stroke="currentColor"
+                                stroke-width="2.5" />
+                        </svg>
+                    </div>
+                    <h3>Know Exactly Where Your Deals Stand</h3>
+                    <p>No more guessing. No more messy tracking. We organize your pipeline so you can clearly see every
+                        lead,
+                        every deal, and what needs to happen next.</p>
+                    <span class="service-highlight">📊 More deals closed, less confusion</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" style="--delay:240ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="6" width="52" height="52" rx="6" stroke="currentColor" stroke-width="2.5" />
+                            <path d="M14 42l10-12 10 6 10-16" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="14" cy="42" r="3" fill="currentColor" />
+                            <circle cx="24" cy="30" r="3" fill="currentColor" />
+                            <circle cx="34" cy="36" r="3" fill="currentColor" />
+                            <circle cx="44" cy="20" r="3" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>See Your Numbers in Real-Time</h3>
+                    <p>No spreadsheets. No manual tracking. Get a simple dashboard that shows your leads, sales, and
+                        performance—all in one place.</p>
+                    <span class="service-highlight">📈 Know what's working instantly</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" style="--delay:320ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="6" width="38" height="46" rx="4" stroke="currentColor" stroke-width="2.5" />
+                            <rect x="6" y="14" width="38" height="46" rx="4" stroke="currentColor" stroke-width="2.5" />
+                            <path d="M16 30h18M16 38h12" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Launch New Systems Fast</h3>
+                    <p>Set up new projects or clients in minutes, not days. We create ready-to-use templates so you can
+                        copy,
+                        paste, and go live quickly.</p>
+                    <span class="service-highlight">🚀 Save hours of setup time</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" style="--delay:400ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="2.5" />
+                            <path d="M41 41l14 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M22 28h12M28 22v12" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Find What's Losing You Money</h3>
+                    <p>There might be leaks in your system—and you don't even see them. We check your setup and show you
+                        exactly
+                        what's broken and how to fix it.</p>
+                    <span class="service-highlight">🔍 Fix hidden problems fast</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card featured" data-aos="fade-up" style="--delay:480ms">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-badge">🤖 AI-Powered</div>
+                    <div class="service-icon-wrap" aria-hidden="true">
+                        <svg class="service-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="12" y="20" width="40" height="32" rx="6" stroke="currentColor"
+                                stroke-width="2.5" />
+                            <circle cx="24" cy="34" r="4" fill="currentColor" />
+                            <circle cx="40" cy="34" r="4" fill="currentColor" />
+                            <path d="M24 44h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M32 20v-8M26 12h12" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <path d="M6 36h6M52 36h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Let AI Handle Your Leads 24/7</h3>
+                    <p>Never miss a call or message again. We set up AI that can answer questions, qualify leads, and
+                        book
+                        appointments—even when you're offline.</p>
+                    <span class="service-highlight">🤖 Works for you 24/7</span>
+                    <div class="card-bottom-line" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio-section section" aria-label="Portfolio and Case Studies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// CASE STUDIES</span>
+                <h2 class="section-title">Projects That <span class="gradient-text">Drive Results</span></h2>
+                <p class="section-subtitle">Real systems. Real outcomes. Real revenue.</p>
+            </div>
+            <div class="portfolio-controls">
+                <div class="portfolio-filters" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="funnels">Funnels / Websites</button>
+                    <button class="filter-btn" data-filter="automation">Automation</button>
+                    <button class="filter-btn" data-filter="ai">AI Agents &amp; Voice</button>
+                </div>
+                <div class="portfolio-search-wrap">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <input type="text" class="portfolio-search" id="portfolioSearch" placeholder="Search projects…"
+                        aria-label="Search projects" />
+                </div>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <!-- PROJECT 1 -->
+                <article class="portfolio-card animated" data-category="funnels"
+                    data-keywords="facial spa website booking lead generation" style="--delay:0ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c789073204ccc38d4786e9.jpg"
+                            alt="Facial Spa Website" loading="lazy" />
+                        <span class="portfolio-tag">Funnels / Websites</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Facial Spa Website</h3>
+                        <p>A modern facial spa website designed to streamline bookings, capture leads, and automate
+                            client
+                            follow-ups.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Modern Website</span>
+                            <span class="keyword-tag">Online Booking</span>
+                            <span class="keyword-tag">Lead Generation</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>120+</strong> Bookings/mo</span>
+                            <span class="metric"><strong>45%</strong> CVR</span>
+                            <span class="metric"><strong>350</strong> Leads/mo</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="facial-spa">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2 -->
+                <article class="portfolio-card animated" data-category="funnels"
+                    data-keywords="cozy unit booking direct funnel website" style="--delay:100ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c87a4d9fc63a4bb3465e16.jpg"
+                            alt="Direct Booking Website" loading="lazy" />
+                        <span class="portfolio-tag">Funnels / Websites</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Direct Booking Website</h3>
+                        <p>Direct booking website that bypassed platform fees and increased property owner revenue by
+                            40%.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Direct Booking</span>
+                            <span class="keyword-tag">Online Booking</span>
+                            <span class="keyword-tag">Website</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>40%</strong> Revenue Up</span>
+                            <span class="metric"><strong>2x</strong> Repeats</span>
+                            <span class="metric"><strong>-20%</strong> Fees</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="direct-booking">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3 -->
+                <article class="portfolio-card animated" data-category="funnels"
+                    data-keywords="vacation rental website booking lead generation" style="--delay:200ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c8917f2e89d808197b2ad0.jpg"
+                            alt="Vacation Rental Website" loading="lazy" />
+                        <span class="portfolio-tag">Funnels / Websites</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Vacation Rental Website</h3>
+                        <p>Automated lead generation system and booking platform for a vacation rental business.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Finance</span>
+                            <span class="keyword-tag">Lead Magnet</span>
+                            <span class="keyword-tag">Opt-In</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>60+</strong> Leads/mo</span>
+                            <span class="metric"><strong>34%</strong> Close Rate</span>
+                            <span class="metric"><strong>3hrs</strong> Saved/day</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="vacation-rental">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 4 -->
+                <article class="portfolio-card animated" data-category="funnels"
+                    data-keywords="roofing business funnel lead generation" style="--delay:300ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0a108849c507b52919d87.jpg"
+                            alt="Roofing Business Funnel" loading="lazy" />
+                        <span class="portfolio-tag">Funnels / Websites</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Roofing Business Funnel</h3>
+                        <p>Automated lead generation system and booking platform for a roofing business.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Roofing</span>
+                            <span class="keyword-tag">Lead Magnet</span>
+                            <span class="keyword-tag">Quote</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="roofing-business">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 5 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation appointment confirmation reminder sms email gohighlevel scheduling"
+                    style="--delay:0ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c91b582aa73ac7ac58f81d.png"
+                            alt="Appointment Confirmation + Reminders Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Appointment Confirmation + Reminders</h3>
+                        <p>Multi-touch confirmation and reminder flow that keeps clients informed and shows up on time —
+                            automatically triggered on every booking.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Confirmation</span>
+                            <span class="keyword-tag">Reminders</span>
+                            <span class="keyword-tag">SMS + Email</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>2-Touch</strong> Sequence</span>
+                            <span class="metric"><strong>Zero</strong> Manual Work</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="appt-confirm">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 6 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation email sms follow-up sequence nurture workflow gohighlevel fitness"
+                    style="--delay:100ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecca7dcb4cff073dbf8.png"
+                            alt="Email & SMS Nurture Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Email &amp; SMS Nurture Automation</h3>
+                        <p>7-touch automated follow-up sequence across email and SMS for a facial spa, nurturing new and
+                            existing
+                            clients on autopilot.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Email</span>
+                            <span class="keyword-tag">SMS</span>
+                            <span class="keyword-tag">Nurture</span>
+                            <span class="keyword-tag">Fitness</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>28%</strong> Reply Rate</span>
+                            <span class="metric"><strong>5hrs</strong> Saved/wk</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="email-sms">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 7 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation post visit follow-up review rebooking sequence spa clinic beauty"
+                    style="--delay:200ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0e7684cde4bbc2a9b7d32.png"
+                            alt="Post-Visit Follow-Up and Rebooking" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Post-Visit Follow-Up and Rebooking</h3>
+                        <p>Automated follow-up after every visit requesting a Google review, then nudging clients to
+                            rebook —
+                            turning one-time visitors into regulars.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Reviews</span>
+                            <span class="keyword-tag">Rebooking</span>
+                            <span class="keyword-tag">Retention</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>3x</strong> More Reviews</span>
+                            <span class="metric"><strong>+35%</strong> Rebooking</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="post-visit">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 8 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation no show no-show status pipeline tag workflow re-engage"
+                    style="--delay:300ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="Appointment No-Show Status Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Appointment No-Show Status</h3>
+                        <p>Automatically detects no-shows, updates the pipeline stage, and triggers a re-engagement
+                            sequence to
+                            recover the appointment.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">No-Shows</span>
+                            <span class="keyword-tag">Pipeline</span>
+                            <span class="keyword-tag">Re-Engage</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>Auto</strong> Detection</span>
+                            <span class="metric"><strong>40%</strong> Recovered</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="no-show">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 9 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation review request google review sms trigger timing reputation"
+                    style="--delay:0ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="Send Review Request Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Send Review Request</h3>
+                        <p>Perfectly timed automated review request sent via SMS and email after service completion,
+                            with a direct
+                            Google link to remove all friction.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Google Reviews</span>
+                            <span class="keyword-tag">Reputation</span>
+                            <span class="keyword-tag">Timing</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>4.8★</strong> Avg Rating</span>
+                            <span class="metric"><strong>60%</strong> Review Rate</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="review-request">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 10 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation email nurture long term drip sequence crm warm lead reactivation"
+                    style="--delay:100ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="Long-Term Nurture Email Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Long-Term Nurture (Email)</h3>
+                        <p>Extended email drip campaign that keeps your brand top-of-mind for cold leads over 90–180
+                            days,
+                            converting them when they're finally ready to buy.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Email Drip</span>
+                            <span class="keyword-tag">Lead Warm-Up</span>
+                            <span class="keyword-tag">90-Day</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>22%</strong> Open Rate</span>
+                            <span class="metric"><strong>Long-Term</strong> ROI</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="longterm-nurture">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 11 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation abandoned booking recovery cart recovery re-engage sms email funnel"
+                    style="--delay:200ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="Abandoned Booking Recovery Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Abandoned Booking Recovery</h3>
+                        <p>Catches visitors who started but didn't complete a booking, then automatically nudges them
+                            back with
+                            personalized SMS and email follow-ups.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Recovery</span>
+                            <span class="keyword-tag">SMS + Email</span>
+                            <span class="keyword-tag">Conversion</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>30%</strong> Recovered</span>
+                            <span class="metric"><strong>Auto</strong> Triggered</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="abandoned-booking">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 12 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation membership package upsell upgrade crm offer spa clinic subscription"
+                    style="--delay:300ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="Membership Package Upsell Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Membership / Package Upsell</h3>
+                        <p>Smart upsell automation that identifies repeat clients and offers them tiered membership or
+                            multi-session
+                            packages at the perfect moment.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Upsell</span>
+                            <span class="keyword-tag">Membership</span>
+                            <span class="keyword-tag">LTV</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>2.4x</strong> LTV</span>
+                            <span class="metric"><strong>45%</strong> Uptake</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="membership-upsell">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 13 -->
+                <article class="portfolio-card animated" data-category="automation"
+                    data-keywords="automation birthday anniversary promo offer sms email loyalty retention celebration"
+                    style="--delay:0ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="Birthday Anniversary Promos Automation" loading="lazy" />
+                        <span class="portfolio-tag">Automation</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Birthday &amp; Anniversary Promos</h3>
+                        <p>Date-triggered automation that sends personalized birthday or anniversary offers to clients —
+                            making them
+                            feel valued and driving repeat bookings.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Birthday</span>
+                            <span class="keyword-tag">Loyalty</span>
+                            <span class="keyword-tag">Promo</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>48%</strong> Redemption</span>
+                            <span class="metric"><strong>Auto</strong> Year-Round</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="bday-promo">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 14 -->
+                <article class="portfolio-card animated" data-category="ai"
+                    data-keywords="ai voice agent artificial intelligence gohighlevel bot phone call qualify leads"
+                    style="--delay:0ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="AI Voice Agent for Lead Qualification" loading="lazy" />
+                        <span class="portfolio-tag">AI Agents &amp; Voice</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>AI Voice Agent for Lead Qualification</h3>
+                        <p>AI-powered voice bot that calls new leads within 60 seconds, asks qualifying questions, and
+                            books
+                            appointments automatically.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">AI Voice</span>
+                            <span class="keyword-tag">Lead Qualify</span>
+                            <span class="keyword-tag">Auto-Book</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>24/7</strong> Active</span>
+                            <span class="metric"><strong>60s</strong> Response</span>
+                            <span class="metric"><strong>+40%</strong> Bookings</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="ai-voice">View Details →</button>
+                    </div>
+                </article>
+
+                <!-- PROJECT 15 -->
+                <article class="portfolio-card animated" data-category="ai"
+                    data-keywords="ai chatbot chat assistant gpt gohighlevel website bot messaging consulting"
+                    style="--delay:100ms">
+                    <div class="portfolio-media">
+                        <img src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="AI Chat Assistant for SMB" loading="lazy" />
+                        <span class="portfolio-tag">AI Agents &amp; Voice</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>AI Chat Assistant for SMB</h3>
+                        <p>Deployed an AI chat assistant on a consulting firm's website that handles FAQs, qualifies
+                            visitors, and
+                            routes hot leads directly to sales.</p>
+                        <div class="portfolio-keywords">
+                            <span class="keyword-tag">Chatbot</span>
+                            <span class="keyword-tag">AI Agent</span>
+                            <span class="keyword-tag">Consulting</span>
+                        </div>
+                        <div class="portfolio-metrics">
+                            <span class="metric"><strong>80%</strong> FAQ Handled</span>
+                            <span class="metric"><strong>2x</strong> Qualified Leads</span>
+                        </div>
+                        <button class="btn-view-details" data-modal="ai-chat">View Details →</button>
+                    </div>
+                </article>
+
+            </div>
+            <div class="no-results" id="noResults" aria-live="polite">No projects match your search. Try a different
+                keyword
+                or filter.</div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="results" class="testimonials-section section" aria-label="Client Testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// RESULTS &amp; TESTIMONIALS</span>
+                <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+            </div>
+            <div class="testimonial-wrapper">
+                <div class="testimonial-scene" id="testimonialScene" aria-live="polite">
+                    <div class="testimonial-card" role="group" aria-label="Testimonial 1 of 6">
+                        <div class="t-quote" aria-hidden="true">"</div>
+                        <p class="t-text">James built us a real estate funnel that generated 73 qualified leads in the
+                            first month
+                            alone. The automation saved us hours of manual follow-up every single day. ROI was
+                            incredible — 5x within
+                            60 days.</p>
+                        <div class="t-author">
+                            <div class="t-avatar"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maria&backgroundColor=0B7DDA&radius=50"
+                                    alt="Maria R."
+                                    onerror="this.parentElement.innerHTML='<span class=\'t-avatar-initials\'>MR</span>'" />
+                            </div>
+                            <div class="t-author-info"><strong>Maria R.</strong><span>Real Estate Agency Owner</span>
+                            </div>
+                            <div class="t-stars" aria-label="5 star rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="group" aria-label="Testimonial 2 of 6">
+                        <div class="t-quote" aria-hidden="true">"</div>
+                        <p class="t-text">Before James, I was losing 15% of my income to Airbnb fees. After his booking
+                            funnel and
+                            automated follow-up system, direct bookings are up 40% and I keep more of every reservation.
+                        </p>
+                        <div class="t-author">
+                            <div class="t-avatar"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=David&backgroundColor=0B7DDA&radius=50"
+                                    alt="David L."
+                                    onerror="this.parentElement.innerHTML='<span class=\'t-avatar-initials\'>DL</span>'" />
+                            </div>
+                            <div class="t-author-info"><strong>David L.</strong><span>Airbnb Superhost</span></div>
+                            <div class="t-stars" aria-label="5 star rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="group" aria-label="Testimonial 3 of 6">
+                        <div class="t-quote" aria-hidden="true">"</div>
+                        <p class="t-text">I was spending 3 hours a day chasing leads manually. James set up our entire
+                            CRM
+                            automation and lead funnel in 2 weeks. Now we get consistent leads on autopilot and our
+                            close rate jumped
+                            from 18% to 34%.</p>
+                        <div class="t-author">
+                            <div class="t-avatar"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah&backgroundColor=0B7DDA&radius=50"
+                                    alt="Sarah C."
+                                    onerror="this.parentElement.innerHTML='<span class=\'t-avatar-initials\'>SC</span>'" />
+                            </div>
+                            <div class="t-author-info"><strong>Sarah C.</strong><span>Bookkeeping Firm Owner</span>
+                            </div>
+                            <div class="t-stars" aria-label="5 star rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="group" aria-label="Testimonial 4 of 6">
+                        <div class="t-quote" aria-hidden="true">"</div>
+                        <p class="t-text">James set up our AI voice agent and it literally calls new leads within a
+                            minute of
+                            signing up. Our team wakes up to pre-qualified appointments every morning. Game changer
+                            doesn't even cover
+                            it.</p>
+                        <div class="t-author">
+                            <div class="t-avatar"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kevin&backgroundColor=0B7DDA&radius=50"
+                                    alt="Kevin M."
+                                    onerror="this.parentElement.innerHTML='<span class=\'t-avatar-initials\'>KM</span>'" />
+                            </div>
+                            <div class="t-author-info"><strong>Kevin M.</strong><span>Business Consultant</span></div>
+                            <div class="t-stars" aria-label="5 star rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="group" aria-label="Testimonial 5 of 6">
+                        <div class="t-quote" aria-hidden="true">"</div>
+                        <p class="t-text">We had a messy CRM and no real system. James came in, cleaned everything up,
+                            and built us
+                            a pipeline we actually use. Revenue went up 35% the first quarter after launch.</p>
+                        <div class="t-author">
+                            <div class="t-avatar"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rachel&backgroundColor=0B7DDA&radius=50"
+                                    alt="Rachel T."
+                                    onerror="this.parentElement.innerHTML='<span class=\'t-avatar-initials\'>RT</span>'" />
+                            </div>
+                            <div class="t-author-info"><strong>Rachel T.</strong><span>E-Commerce Founder</span></div>
+                            <div class="t-stars" aria-label="5 star rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="group" aria-label="Testimonial 6 of 6">
+                        <div class="t-quote" aria-hidden="true">"</div>
+                        <p class="t-text">No-shows were killing our clinic's schedule. James built an automated reminder
+                            system that
+                            sends texts and emails before every appointment. No-shows dropped by more than half in the
+                            first month.
+                        </p>
+                        <div class="t-author">
+                            <div class="t-avatar"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=DrAnna&backgroundColor=0B7DDA&radius=50"
+                                    alt="Dr. Anna S."
+                                    onerror="this.parentElement.innerHTML='<span class=\'t-avatar-initials\'>AS</span>'" />
+                            </div>
+                            <div class="t-author-info"><strong>Dr. Anna S.</strong><span>Dental Clinic Owner</span>
+                            </div>
+                            <div class="t-stars" aria-label="5 star rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-controls">
+                    <button class="t-btn" id="tPrev" aria-label="Previous testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="t-dots" id="tDots" role="tablist" aria-label="Testimonial navigation">
+                        <button class="t-dot active" data-index="0" role="tab" aria-selected="true"
+                            aria-label="Testimonial 1"></button>
+                        <button class="t-dot" data-index="1" role="tab" aria-selected="false"
+                            aria-label="Testimonial 2"></button>
+                        <button class="t-dot" data-index="2" role="tab" aria-selected="false"
+                            aria-label="Testimonial 3"></button>
+                        <button class="t-dot" data-index="3" role="tab" aria-selected="false"
+                            aria-label="Testimonial 4"></button>
+                        <button class="t-dot" data-index="4" role="tab" aria-selected="false"
+                            aria-label="Testimonial 5"></button>
+                        <button class="t-dot" data-index="5" role="tab" aria-selected="false"
+                            aria-label="Testimonial 6"></button>
+                    </div>
+                    <button class="t-btn" id="tNext" aria-label="Next testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="t-counter" id="tCounter" aria-live="polite">1 / 6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process-section section" aria-label="My Process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// HOW IT WORKS</span>
+                <h2 class="section-title">The <span class="gradient-text">System</span> Behind Results</h2>
+                <p class="section-subtitle">A battle-tested 4-step framework from strategy to revenue.</p>
+            </div>
+            <div class="process-grid" role="list">
+                <div class="process-card" data-aos="fade-up" style="--delay:0ms" role="listitem">
+                    <div class="pcard-top"><span class="pcard-num">01</span>
+                        <div class="pcard-connector" aria-hidden="true"></div>
+                    </div>
+                    <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                            <circle cx="16" cy="10" r="5" stroke="#0B7DDA" stroke-width="2" />
+                            <path d="M8 26c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0B7DDA" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg></div>
+                    <h3>Strategy</h3>
+                    <p>Deep-dive into your business, audience, and goals. Funnel architecture mapped before a pixel is
+                        designed.
+                    </p>
+                    <div class="pcard-tags"><span>Research</span><span>Mapping</span><span>Analysis</span></div>
+                </div>
+                <div class="process-card" data-aos="fade-up" style="--delay:120ms" role="listitem">
+                    <div class="pcard-top"><span class="pcard-num">02</span>
+                        <div class="pcard-connector" aria-hidden="true"></div>
+                    </div>
+                    <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                            <rect x="4" y="4" width="24" height="24" rx="3" stroke="#0B7DDA" stroke-width="2" />
+                            <path d="M9 16l5 5 9-10" stroke="#0B7DDA" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <h3>Funnel Design</h3>
+                    <p>Conversion-optimized pages with psychological triggers, clear copy, and CTAs that move visitors
+                        to act.</p>
+                    <div class="pcard-tags"><span>Landing Pages</span><span>Copywriting</span><span>UX</span></div>
+                </div>
+                <div class="process-card" data-aos="fade-up" style="--delay:240ms" role="listitem">
+                    <div class="pcard-top"><span class="pcard-num">03</span>
+                        <div class="pcard-connector" aria-hidden="true"></div>
+                    </div>
+                    <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                            <circle cx="16" cy="16" r="4" stroke="#0B7DDA" stroke-width="2" />
+                            <path
+                                d="M16 4v3M16 25v3M4 16h3M25 16h3M7.05 7.05l2.12 2.12M22.83 22.83l2.12 2.12M7.05 24.95l2.12-2.12M22.83 9.17l2.12-2.12"
+                                stroke="#0B7DDA" stroke-width="2" stroke-linecap="round" />
+                        </svg></div>
+                    <h3>Automation Setup</h3>
+                    <p>CRM, email sequences, and lead nurturing wired up end-to-end so nothing falls through the cracks.
+                    </p>
+                    <div class="pcard-tags"><span>GoHighLevel</span><span>Email</span><span>SMS</span></div>
+                </div>
+                <div class="process-card" data-aos="fade-up" style="--delay:360ms" role="listitem">
+                    <div class="pcard-top"><span class="pcard-num">04</span></div>
+                    <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                            <path d="M16 4l2.5 7.5H26l-6.5 4.5 2.5 7.5L16 19l-6 4.5 2.5-7.5L6 11.5h7.5z"
+                                stroke="#0B7DDA" stroke-width="2" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3>Lead Generation</h3>
+                    <p>System goes live — capturing and delivering qualified leads to your pipeline on autopilot, 24/7.
+                    </p>
+                    <div class="pcard-tags"><span>Lead Magnets</span><span>Traffic</span><span>Analytics</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="cta-section section" aria-label="Contact">
+        <div class="cta-glow-bg" aria-hidden="true"></div>
+        <div class="cta-grid-overlay" aria-hidden="true"></div>
+        <div class="container">
+            <div class="cta-content">
+                <span class="section-label">// READY TO SCALE?</span>
+                <h2 class="cta-title">Let's Build Your <span class="gradient-text">Revenue Machine</span></h2>
+                <p class="cta-subtitle">Fill out the form below and I'll get back to you within 24 hours to map out a
+                    funnel
+                    system that turns strangers into paying customers — completely on autopilot.</p>
+
+                <div class="cta-contact-row">
+                    <a href="mailto:james.yourva@gmail.com" class="contact-chip">✉ james.yourva@gmail.com</a>
+                    <a href="tel:+639626925833" class="contact-chip">📞 0962 692 5833</a>
+                </div>
+
+                <!-- Calendly inline widget begin -->
+                <!-- Calendly inline widget begin -->
+                <br>
+                <!-- Calendly inline widget begin -->
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/james-yourva?hide_landing_page_details=1&hide_gdpr_banner=1"
+                    style="min-width:300px;height:600px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
+                <!-- Calendly inline widget end -->
+                <!-- Calendly inline widget end -->
+                <!-- Calendly inline widget end -->
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo-wrap" aria-label="Just Dev by James">
+                        <img src="https://assets.cdn.filesafe.space/qhZKx5CpmtePKttsLB0f/media/69b629b7ad027632f3ec5eb3.png"
+                            alt="Just Dev by James" class="footer-logo" width="36" height="36"
+                            onerror="this.style.display='none'" />
+                        <span class="footer-logo-text">Just Dev <span class="accent">by JD</span></span>
+                    </a>
+                    <p>Funnel Designer &amp; GHL Systems Builder helping businesses grow smarter, faster, and on
+                        autopilot.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Navigation</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-connect-col">
+                    <h4>Connect</h4>
+                    <div class="social-icons" aria-label="Social media links">
+                        <a href="https://www.facebook.com/jamesd.yourva/" class=" social-btn" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jamesyourva" class="social-btn" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="https://v2.onlinejobs.ph/jobseekers/info/4581237" class="social-btn" target="_blank"
+                            rel="noopener noreferrer" aria-label="OnlineJobsPH">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01494cf781ede4a5c8?mp_source=share"
+                            class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-contact-info">
+                        <a href="mailto:james.yourva@gmail.com">james.yourva@gmail.com</a>
+                        <a href="tel:+639626925833">0962 692 5833</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Just Dev by James. All rights reserved.</p>
+                <p>Built with ⚡ Precision &amp; Purpose</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODALS ===== -->
+
+    <!-- Modal: Facial Spa (single image — no slider needed) -->
+    <div class="modal-overlay" id="modal-facial-spa" role="dialog" aria-modal="true" aria-labelledby="modal-fs-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-media"><img
+                    src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c789073204ccc38d4786e9.jpg"
+                    alt="Facial Spa Website" loading="lazy" /></div>
+            <div class="modal-content">
+                <span class="modal-tag">💆 Facial Spa</span>
+                <div class="modal-header">
+                    <h2 id="modal-fs-title">Facial Spa Website</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>The spa had no digital presence and was losing potential bookings to competitors with modern
+                        websites.
+                        Clients couldn't book online, and there was zero automated follow-up after visits.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Designed a modern, conversion-focused website on GoHighLevel</li>
+                        <li>Integrated an online booking system with automated confirmation &amp; reminders</li>
+                        <li>Built a lead capture funnel with a free consultation offer</li>
+                        <li>Created post-visit email and SMS follow-up sequences for reviews &amp; rebooking</li>
+                        <li>Connected Facebook Pixel and Google Analytics for full tracking</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>120+ online bookings per month within 60 days of launch. The spa saw a 45% conversion rate on the
+                        booking
+                        page and 350+ new leads captured monthly — all automated with zero manual work from the owner.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Direct Booking (single image) -->
+    <div class="modal-overlay" id="modal-direct-booking" role="dialog" aria-modal="true"
+        aria-labelledby="modal-db-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-media"><img
+                    src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c87a4d9fc63a4bb3465e16.jpg"
+                    alt="Direct Booking Website" loading="lazy" /></div>
+            <div class="modal-content">
+                <span class="modal-tag">🏡 Cozy Staycation</span>
+                <div class="modal-header">
+                    <h2 id="modal-db-title">Direct Booking Website</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>The property owner was losing 15% of every booking to Airbnb fees and had zero control over guest
+                        relationships — no way to build repeat business or referrals.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Designed a direct booking landing page with trust elements &amp; real reviews</li>
+                        <li>Created a "VIP Guest Discount" offer exclusively for direct bookings</li>
+                        <li>Built automated post-stay email sequence for repeat bookings</li>
+                        <li>SMS system for check-in instructions, local tips &amp; upsell offers</li>
+                        <li>Referral incentive program wired into the CRM</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>Within 90 days, 40% of bookings came direct. Platform fees dropped dramatically and the repeat
+                        booking rate
+                        doubled — keeping more revenue in the owner's pocket.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Vacation Rental (single image) -->
+    <div class="modal-overlay" id="modal-vacation-rental" role="dialog" aria-modal="true"
+        aria-labelledby="modal-vr-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-media"><img
+                    src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c8917f2e89d808197b2ad0.jpg"
+                    alt="Vacation Rental Website" loading="lazy" /></div>
+            <div class="modal-content">
+                <span class="modal-tag">🏡 Vacation Rental</span>
+                <div class="modal-header">
+                    <h2 id="modal-vr-title">Vacation Rental Website</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>The property owner was struggling with low booking rates and inconsistent guest communication,
+                        relying on
+                        manual processes causing missed bookings, double-bookings, and slow response times.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Centralized all booking platforms into one system</li>
+                        <li>Eliminated double bookings and missed inquiries</li>
+                        <li>Built guest retention and repeat booking sequences</li>
+                        <li>Automated communication and follow-ups</li>
+                        <li>Streamlined payment tracking and guest preferences</li>
+                        <li>SMS nudge sequence for leads who didn't book after the email sequence</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>Direct inquiries increased by 15%, guest response time improved from 24hrs to 6hrs, repeat
+                        bookings grew
+                        10%, and double bookings reduced by 25%.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Roofing Business (single image) -->
+    <div class="modal-overlay" id="modal-roofing-business" role="dialog" aria-modal="true"
+        aria-labelledby="modal-rb-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-media"><img
+                    src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0a108849c507b52919d87.jpg"
+                    alt="Roofing Business Funnel" loading="lazy" /></div>
+            <div class="modal-content">
+                <span class="modal-tag">🏠 Roofing Business</span>
+                <div class="modal-header">
+                    <h2 id="modal-rb-title">Roofing Business Funnel</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>RoofPro struggled with missed leads and slow response times because inquiries from calls,
+                        Facebook, and
+                        websites weren't centralized. No automated follow-ups led to lost customers and low conversion
+                        rates.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Centralized all leads from calls, Facebook, SMS, and website into one GoHighLevel CRM</li>
+                        <li>Automated instant responses via SMS, email, and Facebook Messenger</li>
+                        <li>Set up automated follow-up sequences to nurture prospects</li>
+                        <li>Pipeline management to track every lead stage</li>
+                        <li>Automated appointment booking with reminders to reduce no-shows</li>
+                        <li>High-converting landing pages and funnels to capture roofing leads</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>With GoHighLevel in place, the roofing business responds to leads instantly, captures every
+                        inquiry, and
+                        significantly increased conversion rates. Streamlined automation improved scheduling, reduced
+                        no-shows, and
+                        created a smoother customer experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- AUTOMATION MODALS — all use the reusable slider markup -->
+    <!-- To add/remove images: edit the .mslide items inside    -->
+    <!-- each .mslider-track and update data-total accordingly  -->
+    <!-- ====================================================== -->
+
+    <!-- Modal: Appointment Confirmation + Reminders (Automation) -->
+    <div class="modal-overlay" id="modal-appt-confirm" role="dialog" aria-modal="true" aria-labelledby="modal-ac-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="1" aria-label="Appointment confirmation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c91b582aa73ac7ac58f81d.png"
+                            alt="Appointment Confirmation — slide 1" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">🔔 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-ac-title">Appointment Confirmation + Reminders</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A facial spa business was dealing with a high no-show rate because clients simply forgot their
+                        appointments. Manual reminder calls were eating hours of staff time every day.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Instant confirmation SMS + email sent automatically on every booking</li>
+                        <li>2-touch reminder sequence: 24hrs and 1hr before the appointment</li>
+                        <li>One-click reschedule link included in every reminder</li>
+                        <li>Post-confirmation tag applied in GHL to track client engagement</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>No-shows dropped by 50%. Staff reclaimed hours previously spent on manual reminder calls, and
+                        client
+                        satisfaction improved due to clear, timely communication.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Email & SMS Nurture Automation (Automation) -->
+    <div class="modal-overlay" id="modal-email-sms" role="dialog" aria-modal="true" aria-labelledby="modal-es-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="3" aria-label="Email and SMS automation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecca7dcb4cff073dbf8.png"
+                            alt="Email & SMS Nurture — slide 1" loading="lazy" /></div>
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecbd05cd23236679386.png"
+                            alt="Email & SMS Nurture — slide 2" loading="lazy" /></div>
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecc0e4c7b474710217b.png"
+                            alt="Email & SMS Nurture — slide 3" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                    <button class="mslider-dot" data-slide="1" role="tab" aria-selected="false"
+                        aria-label="Slide 2"></button>
+                    <button class="mslider-dot" data-slide="2" role="tab" aria-selected="false"
+                        aria-label="Slide 3"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 3</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">🔔 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-es-title">Email &amp; SMS Nurture Automation</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>Facial spa businesses struggle with inconsistent bookings and missed inquiries due to slow
+                        responses and
+                        lack of a centralized system, as well as low client retention from manual follow-ups.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Centralize all client inquiries from Facebook, Instagram, SMS, and website into one CRM</li>
+                        <li>Automate instant replies to new inquiries to increase booking chances</li>
+                        <li>Set up email and SMS nurture sequences for potential and existing clients</li>
+                        <li>Implement automated appointment booking with reminders to reduce no-shows</li>
+                        <li>Organize client data and treatment history for personalized marketing</li>
+                        <li>Create promotional campaigns for repeat visits, packages, and seasonal offers</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>With automation in place, facial spa businesses increased bookings, improved client retention,
+                        and
+                        delivered a more consistent customer experience — leading to higher revenue and better client
+                        relationships.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Post-Visit Follow-Up and Rebooking (Automation) — 2 slides -->
+    <div class="modal-overlay" id="modal-post-visit" role="dialog" aria-modal="true" aria-labelledby="modal-pv-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="2" aria-label="Post-visit follow-up screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0e7684cde4bbc2a9b7d32.png"
+                            alt="Post-Visit Follow-Up — slide 1" loading="lazy" /></div>
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0e7684cde4bbc2a9b7d33.png"
+                            alt="Post-Visit Follow-Up — slide 2" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                    <button class="mslider-dot" data-slide="1" role="tab" aria-selected="false"
+                        aria-label="Slide 2"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 2</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">⭐ Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-pv-title">Post-Visit Follow-Up and Rebooking</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A facial spa had great services but almost no Google reviews, and most clients only visited once.
+                        Without
+                        follow-up, there was no system to drive repeat business or build social proof.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Automated SMS sent 2 hours after appointment with a direct Google review link</li>
+                        <li>Email follow-up 24 hours post-visit with care tips and a rebooking offer</li>
+                        <li>Second rebooking nudge sent 3 weeks later for recurring service clients</li>
+                        <li>Positive responders tagged and added to the loyalty segment in GHL</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>Google reviews tripled within 60 days. Rebooking rate increased by 35%, turning single-visit
+                        clients into
+                        consistent, revenue-generating regulars.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: No-Show Status (Automation) - 2 slides -->
+    <div class="modal-overlay" id="modal-no-show" role="dialog" aria-modal="true" aria-labelledby="modal-ns-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="2" aria-label="No-show automation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c91b582aa73ac7ac58f81d.png"
+                            alt="No-Show Status — slide 1" loading="lazy" /></div>
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c5ec387794bf6c2f4e74d5.png"
+                            alt="No-Show Status — slide 2" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                    <button class="mslider-dot" data-slide="1" role="tab" aria-selected="false"
+                        aria-label="Slide 2"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 2</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">❌ Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-ns-title">Appointment No-Show Status</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A clinic had no system to track no-shows in the CRM. Missed appointments were either forgotten or
+                        required
+                        manual follow-up — losing revenue and wasting admin time.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Built a trigger to detect when an appointment status is marked "No-Show" in GHL</li>
+                        <li>Automatically updates the contact's pipeline stage and applies a "No-Show" tag</li>
+                        <li>Launches a 3-step re-engagement sequence via SMS and email to reschedule</li>
+                        <li>Unresponsive no-shows moved to a long-term nurture sequence after 7 days</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>40% of no-shows were recovered and rescheduled through the automated sequence with no manual
+                        intervention
+                        required.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Review Request (Automation) -->
+    <div class="modal-overlay" id="modal-review-request" role="dialog" aria-modal="true"
+        aria-labelledby="modal-rr-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="1" aria-label="Review request automation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecca7dcb4cff073dbf8.png"
+                            alt="Review Request — slide 1" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">💬 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-rr-title">Send Review Request</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A local service business had a 3.9-star Google rating and was losing potential clients to
+                        better-reviewed
+                        competitors — despite delivering excellent service. No one was asking for reviews at the right
+                        time.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Automated review request triggered 1 hour after service completion</li>
+                        <li>Personalized SMS with the client's name and a direct Google review link</li>
+                        <li>Follow-up email the next day for clients who didn't engage with the first message</li>
+                        <li>Negative responders routed to the owner privately — not public-facing</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>Google rating climbed from 3.9 to 4.8 stars in 90 days. Over 60% of clients who received the SMS
+                        left a
+                        review — all handled without a single manual request from staff.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Long-Term Nurture (Automation) -->
+    <div class="modal-overlay" id="modal-longterm-nurture" role="dialog" aria-modal="true"
+        aria-labelledby="modal-ltn-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="1"
+                aria-label="Long-term nurture automation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecbd05cd23236679386.png"
+                            alt="Long-Term Nurture — slide 1" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">📨 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-ltn-title">Long-Term Nurture (Email)</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A coaching brand had a list of 600+ leads who had gone cold — some hadn't engaged in months.
+                        Without a
+                        system to stay in touch consistently, those leads were as good as lost.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Built a 90-day email drip sequence with 12 value-packed touchpoints</li>
+                        <li>Emails rotate between education, social proof, and soft offers</li>
+                        <li>Conditional logic: engaged leads fast-tracked to sales; cold leads stay in nurture</li>
+                        <li>Automated re-engagement email at day 90 with an exclusive time-limited offer</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>22% average open rate across the sequence. 14% of cold leads converted into paying clients over
+                        90 days —
+                        revenue that would have been permanently lost without the system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Abandoned Booking (Automation) -->
+    <div class="modal-overlay" id="modal-abandoned-booking" role="dialog" aria-modal="true"
+        aria-labelledby="modal-ab-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="1"
+                aria-label="Abandoned booking recovery screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0aecc0e4c7b474710217b.png"
+                            alt="Abandoned Booking Recovery — slide 1" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">🛒 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-ab-title">Abandoned Booking Recovery</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A beauty studio was seeing high traffic to their booking page but a low completion rate. Visitors
+                        were
+                        dropping off mid-funnel — silent revenue leaks every single day.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Trigger detects when a lead submits the first form step but doesn't complete booking</li>
+                        <li>Immediate SMS sent 15 minutes after drop-off with a direct link back to booking</li>
+                        <li>Follow-up email 2 hours later with social proof and FAQ section</li>
+                        <li>Final re-engagement SMS at 24 hours with a limited-time incentive</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>30% of abandoned booking leads were recovered. The automation paid for itself in the first week
+                        from
+                        previously lost revenue.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Membership Upsell (Automation) -->
+    <div class="modal-overlay" id="modal-membership-upsell" role="dialog" aria-modal="true"
+        aria-labelledby="modal-mu-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="1"
+                aria-label="Membership upsell automation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c87a4d9fc63a4bb3465e16.jpg"
+                            alt="Membership Upsell — slide 1" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">💎 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-mu-title">Membership / Package Upsell</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A spa was generating steady bookings but limiting revenue to single-session fees. There was no
+                        system to
+                        identify and convert repeat clients into higher-value members or package buyers.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Trigger fires after a client's 3rd appointment — identifying them as a repeat buyer</li>
+                        <li>Personalized SMS offering an exclusive membership or multi-session package deal</li>
+                        <li>Follow-up email with a comparison of single-session vs. membership savings</li>
+                        <li>Interested clients auto-tagged and routed to a purchase confirmation workflow</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>45% of targeted repeat clients upgraded to a membership or package. Average client lifetime value
+                        increased
+                        by 2.4x, creating predictable monthly recurring revenue.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Birthday & Anniversary Promos (Automation) -->
+    <div class="modal-overlay" id="modal-bday-promo" role="dialog" aria-modal="true" aria-labelledby="modal-bp-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-slider js-modal-slider" data-total="1" aria-label="Birthday promo automation screenshots">
+                <div class="mslider-track">
+                    <div class="mslide"><img
+                            src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c8917f2e89d808197b2ad0.jpg"
+                            alt="Birthday Promos — slide 1" loading="lazy" /></div>
+                </div>
+                <button class="mslider-btn mslider-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg></button>
+                <button class="mslider-btn mslider-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></button>
+                <div class="mslider-dots" role="tablist" aria-label="Slide navigation">
+                    <button class="mslider-dot active" data-slide="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                </div>
+                <span class="mslider-counter" aria-live="polite">1 / 1</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-tag">🎂 Automation</span>
+                <div class="modal-header">
+                    <h2 id="modal-bp-title">Birthday &amp; Anniversary Promos</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A wellness business had a solid client base but almost no loyalty system. Clients felt like
+                        numbers, not
+                        people — and competitors offering personalized perks were winning their repeat business.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Collected client birthday and anniversary dates at booking or via update form</li>
+                        <li>Date-triggered automation sends a personalized SMS and email 3 days before the event</li>
+                        <li>Message includes a special discount code or complimentary add-on offer, valid for 7 days
+                        </li>
+                        <li>Redemptions automatically tracked and logged in GHL for ROI reporting</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>48% offer redemption rate. Clients who received birthday messages had a 60% higher rebooking rate
+                        — turning
+                        celebration moments into consistent revenue drivers year-round.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: AI Voice (single image — not automation category) -->
+    <div class="modal-overlay" id="modal-ai-voice" role="dialog" aria-modal="true" aria-labelledby="modal-aiv-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-media"><img
+                    src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69d0a108849c507b52919d87.jpg"
+                    alt="AI Voice Agent for Lead Qualification" loading="lazy" /></div>
+            <div class="modal-content">
+                <span class="modal-tag">🤖 AI Agents &amp; Voice</span>
+                <div class="modal-header">
+                    <h2 id="modal-aiv-title">AI Voice Agent for Lead Qualification</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A consulting firm was losing hot leads to slow response times. By the time someone called back,
+                        the
+                        prospect had already moved on to a competitor who answered first.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Built an AI voice agent using GoHighLevel's AI tools and third-party integrations</li>
+                        <li>Configured the agent to ask 5 qualifying questions and score leads in real time</li>
+                        <li>Integrated directly with the GHL calendar to book appointments on the spot</li>
+                        <li>Set up fallback SMS if the call goes unanswered</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>Booking rate increased by 40%. The business owner now wakes up to a calendar full of
+                        pre-qualified
+                        appointments — with zero human effort from their team.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: AI Chat (single image — not automation category) -->
+    <div class="modal-overlay" id="modal-ai-chat" role="dialog" aria-modal="true" aria-labelledby="modal-aic-title">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-media"><img
+                    src="https://assets.cdn.filesafe.space/iNnidtlzWEvplKGDC0S3/media/69c91b582aa73ac7ac58f81d.png"
+                    alt="AI Chat Assistant for SMB" loading="lazy" /></div>
+            <div class="modal-content">
+                <span class="modal-tag">💬 AI Agents &amp; Voice</span>
+                <div class="modal-header">
+                    <h2 id="modal-aic-title">AI Chat Assistant for SMB</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>🔥 The Challenge</h3>
+                    <p>A consulting firm's website had solid traffic but poor conversion — visitors left without
+                        engaging. The
+                        team was overwhelmed answering the same basic questions over and over via email.</p>
+                    <div class="modal-divider"></div>
+                    <h3>⚙️ The Solution</h3>
+                    <ul>
+                        <li>Trained an AI chat assistant on the client's services, pricing, and FAQs</li>
+                        <li>Embedded the bot on the website via GoHighLevel widget</li>
+                        <li>Built qualification logic — bot routes hot leads to the sales team instantly</li>
+                        <li>Connected to the CRM so every chat creates a contact automatically</li>
+                    </ul>
+                    <div class="modal-divider"></div>
+                    <h3>🚀 The Result</h3>
+                    <p>80% of common questions are now handled without any human involvement. Qualified lead volume
+                        doubled
+                        because no visitor leaves the site unanswered, 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
