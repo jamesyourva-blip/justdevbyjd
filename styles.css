@@ -76,7 +76,9 @@
             height: 100%;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.65
+            opacity: 0.65;
+            will-change: transform;
+            contain: strict
         }
 
         .container {
@@ -2426,8 +2428,12 @@
                 word-break: normal
             }
 
-
-
+            /* Calendly widget — prevent overflow on phones */
+            .calendly-inline-widget {
+                height: 650px !important;
+                min-width: 0 !important;
+                width: 100% !important
+            }
             /* ── Footer ── */
             .footer-grid {
                 grid-template-columns: 1fr;
