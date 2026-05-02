@@ -63,35 +63,70 @@
             if (!canvas || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
             var ctx = canvas.getContext('2d');
             var W, H, particles = [];
-            var COUNT = (window.innerWidth < 768) ? 40 : 80;
-            var MAX_D = (window.innerWidth < 768) ? 90 : 130;
+            var isMobile = window.innerWidth < 768;
+            var COUNT = isMobile ? 25 : 60;
+            var MAX_D = isMobile ? 70 : 120;
             var MOUSE = { x: -9999, y: -9999 };
+            var rafId = null;
+            var running = false;
 
             function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-            function mk() { return { x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .45, vy: (Math.random() - .5) * .45, size: Math.random() * 1.8 + .5, alpha: Math.random() * .5 + .15 }; }
+            function mk() { return { x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, size: Math.random() * 1.5 + .4, alpha: Math.random() * .45 + .12 }; }
 
             function draw() {
+                if (!running) return;
                 ctx.clearRect(0, 0, W, H);
                 particles.forEach(function (p) {
                     p.x += p.vx; p.y += p.vy;
                     if (p.x < -5) p.x = W + 5; if (p.x > W + 5) p.x = -5; if (p.y < -5) p.y = H + 5; if (p.y > H + 5) p.y = -5;
                     var dx = p.x - MOUSE.x, dy = p.y - MOUSE.y, d = Math.sqrt(dx * dx + dy * dy);
-                    if (d < 90) { var f = (90 - d) / 90 * .4; p.vx += dx / d * f; p.vy += dy / d * f; var s = Math.sqrt(p.vx * p.vx + p.vy * p.vy); if (s > 1.8) { p.vx *= 1.8 / s; p.vy *= 1.8 / s; } }
+                    if (d < 80) { var f = (80 - d) / 80 * .3; p.vx += dx / d * f; p.vy += dy / d * f; var s = Math.sqrt(p.vx * p.vx + p.vy * p.vy); if (s > 1.4) { p.vx *= 1.4 / s; p.vy *= 1.4 / s; } }
                 });
-                for (var i = 0; i < particles.length; i++) for (var j = i + 1; j < particles.length; j++) {
-                    var a = particles[i], b = particles[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy);
-                    if (d < MAX_D) { ctx.beginPath(); ctx.strokeStyle = 'rgba(11,125,218,' + (1 - d / MAX_D) * .18 + ')'; ctx.lineWidth = .8; ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+                /* Only draw connection lines on non-mobile — O(n²) is too heavy on phones */
+                if (!isMobile) {
+                    for (var i = 0; i < particles.length; i++) for (var j = i + 1; j < particles.length; j++) {
+                        var a = particles[i], b = particles[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy);
+                        if (d < MAX_D) { ctx.beginPath(); ctx.strokeStyle = 'rgba(11,125,218,' + (1 - d / MAX_D) * .18 + ')'; ctx.lineWidth = .8; ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+                    }
                 }
                 particles.forEach(function (p) { ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fillStyle = 'rgba(11,125,218,' + p.alpha + ')'; ctx.fill(); });
-                requestAnimationFrame(draw);
+                rafId = requestAnimationFrame(draw);
+            }
+
+            function startLoop() {
+                if (running) return;
+                running = true;
+                draw();
+            }
+
+            function stopLoop() {
+                running = false;
+                if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
             }
 
             resize();
             for (var i = 0; i < COUNT; i++) particles.push(mk());
-            draw();
-            window.addEventListener('resize', function () { resize(); particles.forEach(function (p) { if (p.x > W) p.x = Math.random() * W; if (p.y > H) p.y = Math.random() * H; }); }, { passive: true });
+            startLoop();
+
+            window.addEventListener('resize', function () {
+                isMobile = window.innerWidth < 768;
+                resize();
+                particles.forEach(function (p) { if (p.x > W) p.x = Math.random() * W; if (p.y > H) p.y = Math.random() * H; });
+            }, { passive: true });
+
             window.addEventListener('mousemove', function (e) { MOUSE.x = e.clientX; MOUSE.y = e.clientY; }, { passive: true });
             window.addEventListener('mouseleave', function () { MOUSE.x = -9999; MOUSE.y = -9999; });
+
+            /* Pause the loop completely when the tab is hidden — critical for mobile battery */
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    stopLoop();
+                    canvas.style.opacity = '0';
+                } else {
+                    canvas.style.opacity = '0.65';
+                    startLoop();
+                }
+            });
         })();
 
         /* ── Scroll Animations ─────────────────────── */
@@ -314,11 +349,16 @@
 
         /* ── Typed Badge ───────────────────────────── */
         (function () {
+            /* Skip the typing effect on small phones — avoids infinite setTimeout chain on low-memory devices */
+            if (window.innerWidth < 480) return;
             var phrases = ['⚡ Taking on New Clients', '⚡ Funnel Designer & GHL System Builder'];
             var badge = document.querySelector('.hero-badge');
             if (!badge || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
             var pi = 0, ci = 0, del = false;
+            var typeTimer = null;
+            var stopped = false;
             function type() {
+                if (stopped) return;
                 var p = phrases[pi];
                 var cur = del ? p.substring(0, ci - 1) : p.substring(0, ci + 1);
                 ci = del ? ci - 1 : ci + 1;
@@ -326,9 +366,19 @@
                 var d = del ? 40 : 70;
                 if (!del && ci === p.length) { d = 2800; del = true; }
                 else if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; d = 400; }
-                setTimeout(type, d);
+                typeTimer = setTimeout(type, d);
             }
-            setTimeout(type, 2400);
+            typeTimer = setTimeout(type, 2400);
+            /* Stop typing when tab is hidden to prevent timer accumulation */
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    stopped = true;
+                    if (typeTimer) { clearTimeout(typeTimer); typeTimer = null; }
+                } else {
+                    stopped = false;
+                    typeTimer = setTimeout(type, 400);
+                }
+            });
         })();
 
         /* ── Cursor Glow ───────────────────────────── */
@@ -348,7 +398,4 @@
             window.dispatchEvent(new Event('scroll'));
         });
 
-        document.addEventListener('visibilitychange', function () {
-            var c = document.getElementById('particleCanvas');
-            if (c) c.style.opacity = document.hidden ? '0' : '0.65';
-        });
+        /* visibilitychange for canvas is now handled inside the particle IIFE above */
