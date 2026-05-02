@@ -43,7 +43,9 @@
             background-color: var(--bg) !important;
             color: var(--text) !important;
             line-height: 1.65;
-            overflow-x: hidden;
+            /* overflow-x:hidden on body kills iOS Safari scroll momentum.
+               Use overflow-x:clip on the body and let the html handle it. */
+            overflow-x: clip;
             min-height: 100vh
         }
 
@@ -1379,7 +1381,6 @@
         .testimonial-scene {
             position: relative;
             height: 280px;
-            perspective: 1000px;
             margin-bottom: 40px
         }
 
@@ -1395,8 +1396,7 @@
             opacity: 0;
             transform: scale(0.88) translateX(60px) rotateY(-8deg);
             transition: opacity 0.55s ease, transform 0.55s ease;
-            pointer-events: none;
-            backface-visibility: hidden
+            pointer-events: none
         }
 
         .testimonial-card.t-active {
@@ -2655,5 +2655,60 @@
             *::after {
                 animation-duration: 0.01ms !important;
                 transition-duration: 0.01ms !important
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════════
+           iOS Safari crash prevention — applied at ≤768px
+           Each CSS animation / 3D-transform / mask-image creates a GPU
+           compositing layer. On iPhone, too many layers exhaust per-tab
+           WebKit memory and the OS kills the tab (looks like a "crash").
+           ═══════════════════════════════════════════════════════════════════ */
+        @media(max-width:768px) {
+
+            /* 1. Kill all infinite CSS animations — each one = 1 GPU layer */
+            .badge-dot,
+            .about-floating-card,
+            .scroll-indicator,
+            .img-glow {
+                animation: none !important;
+                transform: none !important
+            }
+
+            /* 2. CSS smooth-scroll + JS smooth-scroll both running = iOS freeze */
+            html {
+                scroll-behavior: auto
+            }
+
+            /* 3. Strip 3D rotateY — triggers expensive perspective compositing
+                  on iOS even without an explicit perspective parent context.
+                  Replace with simple 2D translateX instead. */
+            .testimonial-card {
+                transform: translateX(60px) !important;
+                transition: opacity 0.4s ease, transform 0.4s ease !important
+            }
+
+            .testimonial-card.t-active {
+                transform: translateX(0) !important
+            }
+
+            .testimonial-card.t-prev-card {
+                transform: translateX(-56px) !important
+            }
+
+            .testimonial-card.t-next-card {
+                transform: translateX(56px) !important
+            }
+
+            /* 4. mask-image grid overlays require software compositing on iOS */
+            .hero-grid-overlay,
+            .cta-grid-overlay {
+                display: none
+            }
+
+            /* 5. Float animation on the about card is always running — remove */
+            .about-floating-card {
+                position: static;
+                margin-top: 12px
             }
         }
