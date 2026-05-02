@@ -76,9 +76,13 @@
             height: 100%;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.65;
-            will-change: transform;
-            contain: strict
+            opacity: 0.65
+        }
+
+        @media (max-width: 768px) {
+            #particleCanvas {
+                display: none
+            }
         }
 
         .container {
@@ -172,6 +176,17 @@
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             transition: box-shadow var(--t-mid)
+        }
+
+        /* On mobile, backdrop-filter on a fixed nav repaints every scroll frame
+           (especially expensive when a canvas animation runs behind it). Use a
+           solid fallback instead so scrolling is always smooth. */
+        @media (max-width: 768px) {
+            #navbar {
+                background: rgba(7, 13, 24, 0.97);
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none
+            }
         }
 
         #navbar.scrolled {
@@ -2232,9 +2247,9 @@
                 top: 68px;
                 left: 0;
                 right: 0;
-                background: var(--bg-nav);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
+                background: rgba(7, 13, 24, 0.98);
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
                 border-bottom: 1px solid var(--border);
                 flex-direction: column;
                 align-items: stretch;
@@ -2462,6 +2477,43 @@
             .modal-body p,
             .modal-body li {
                 font-size: 0.88rem
+            }
+
+            /* ── Mobile scroll performance — CRITICAL ─────────────────────────────
+               backdrop-filter forces a full GPU compositing pass on every scroll
+               frame. Removing it here prevents the browser from crashing when
+               scrolling through the page on low-end / mid-range phones.         */
+            .modal-overlay,
+            .modal-close,
+            .mslider-btn,
+            .mslider-counter,
+            .portfolio-tag,
+            .about-floating-card {
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important
+            }
+
+            .modal-overlay {
+                background: rgba(4, 10, 22, 0.96)
+            }
+
+            /* Prevent overscroll bounce from interrupting scroll compositor */
+            html, body {
+                overscroll-behavior: none
+            }
+
+            /* Native momentum scrolling in overflowing containers */
+            .modal-box {
+                -webkit-overflow-scrolling: touch
+            }
+
+            /* Disable hover transforms — they don’t apply on touch but can
+               still trigger during scroll-inertia on some Android browsers */
+            .service-card:hover,
+            .portfolio-card:hover,
+            .process-card:hover,
+            .pillar:hover {
+                transform: none
             }
         }
 
