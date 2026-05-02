@@ -60,7 +60,9 @@
         /* ── Particles ─────────────────────────────── */
         (function () {
             var canvas = document.getElementById('particleCanvas');
-            if (!canvas || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+            /* Completely skip on mobile — canvas is CSS display:none there anyway,
+               but this also prevents the rAF loop from ever starting on phones */
+            if (!canvas || window.innerWidth < 768 || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
             var ctx = canvas.getContext('2d');
             var W, H, particles = [];
             var isMobile = window.innerWidth < 768;
